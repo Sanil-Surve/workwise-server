@@ -2,7 +2,6 @@
 
 const { body } = require("express-validator");
 
-// Validation rules for form data
 exports.validateFormData = [
   body("name").trim().notEmpty().withMessage("Name is required"),
   body("email").trim().isEmail().withMessage("Invalid email format"),
